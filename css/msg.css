@@ -1,0 +1,92 @@
+/* =============================================== /*
+/*                                                 /* 
+/*                     Mensagens                   /*
+/*                                                 /*
+/* =============================================== */
+
+#messages {
+  position: relative;
+  margin: 50px auto;
+  padding: 0;
+  width: 800px;
+  list-style: none; }
+
+#messages li {
+  float: left;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #c8c7b4; }
+
+#messages li:nth-child(2n) .infos {
+  float: right;
+  margin-left: 20px; }
+
+#messages li:nth-child(2n) .infos a {
+  -webkit-box-shadow: 1px 1px 0 1px rgba(90, 81, 15, 0.2);
+  -moz-box-shadow: 1px 1px 0 1px rgba(90, 81, 15, 0.2);
+  box-shadow: 1px 1px 0 1px rgba(90, 81, 15, 0.2);
+  left: inherit; }
+
+#messages li:nth-child(2n) .content { border-width: 1px 3px 4px 4px; }
+
+#messages li:nth-child(2n) .content:after,
+#messages li:nth-child(2n) .content:before {
+  right: -9px;
+  left: inherit;
+  -webkit-transform: rotate(41deg);
+  -moz-transform: rotate(41deg);
+  -o-transform: rotate(41deg);
+  transform: rotate(41deg); }
+
+#messages li:nth-child(2n) .facebook { right: -10px; }
+
+#messages li:nth-child(2n) .twitter { right: -5%; }
+
+#messages li:nth-child(2n) .github { right: -1%; }
+
+#messages .infos {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  position: relative;
+  float: left;
+  padding: 3px;
+  width: 130px;
+  height: 130px;
+  border: 5px solid #c8c7b4; }
+
+#messages .infos a {
+  -webkit-border-radius: 17px;
+  -moz-border-radius: 17px;
+  -ms-border-radius: 17px;
+  -o-border-radius: 17px;
+  border-radius: 17px;
+  -webkit-box-shadow: -1px 1px 0 1px rgba(90, 81, 15, 0.2);
+  -moz-box-shadow: -1px 1px 0 1px rgba(90, 81, 15, 0.2);
+  box-shadow: -1px 1px 0 1px rgba(90, 81, 15, 0.2);
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background-color: #d5d2a8;
+  color: #fff;
+  text-decoration: none;
+  text-indent: -10000px;
+  font-size: 11px; }
+
+#messages .infos a:hover {
+  padding: 0 10px 0 18px;
+  width: auto;
+  border: none;
+  text-indent: 0;
+  opacity: 0.95; }
+
+#messages img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  width: 100%; 
+}
