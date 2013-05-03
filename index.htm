@@ -1,439 +1,280 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Satisfy" />
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-	<title>PHP Sergipe</title>
-	<script type="text/javascript">
-		$(function() {
-		var $list = $('ul li');
-		$list.filter(':first').addClass('animated flipInX');
-		setInterval(function() {
-			if( $list.filter('.flipInX').index() !== $list.length) {
-				$list.filter('.flipInX').removeClass('animated flipInX').next().addClass('animated flipInX');
-			}
-		}, 400);
-	});
-	</script>
 
-	<style type="text/css">
+	<head>
+		<meta charset="utf-8">
 
-body {
-  background: url("images/background.jpg");
-  font: 15px/150% Georgia, "Times New Roman", Times, serif; }
+		<title>codePhant</title>
 
-/* =============================================== /*
-/*                                                 /* 
-/*     Animate CSS : http://daneden.me/animate     /*
-/*                                                 /*
-/* =============================================== */
+		<meta name="description" content="codePhant é o primeiro evento PHP do estado de Sergipe">
+		<meta name="author" content="Team PHP Sergipe">
 
-@-webkit-keyframes flipInX {
-  0% { -webkit-transform: perspective(400px) rotateX(90deg); }
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  30% { -webkit-transform: perspective(400px) rotateX(-10deg); }
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  70% { -webkit-transform: perspective(400px) rotateX(10deg); }
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
-  100% { -webkit-transform: perspective(400px) rotateX(0deg); } }
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-@-moz-keyframes flipInX {
-  0% { -moz-transform: perspective(400px) rotateX(90deg); }
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 
-  30% { -moz-transform: perspective(400px) rotateX(-10deg); }
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-  70% { -moz-transform: perspective(400px) rotateX(10deg); }
+	<body>
 
-  100% { -moz-transform: perspective(400px) rotateX(0deg); } }
+		<div class="reveal">
 
-@-o-keyframes flipInX {
-  0% { -o-transform: perspective(400px) rotateX(90deg);
-       opacity: 0; }
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
 
-  30% { -o-transform: perspective(400px) rotateX(-10deg); }
+				<section>
+					<img src="codePhant_bgWhite.png" style="border: 0;box-shadow: none;				background: transparent;" />
+					<!-- <h1>CODEPHANT</h1> -->
+					<h3>&nbsp;</h3>
+					<p>
+						<small>Realiza&ccedil;ao <a href="http://phpse.net">PHP Sergipe</a> / <a href="http://twitter.com/phpse">@phpse</a></small>
+					</p>
+				</section>
 
-  70% { -o-transform: perspective(400px) rotateX(10deg); }
+				<section>
+					<h2>Sobre o PHP</h2>
+					<p>
+						O php &eacute; uma linguagem de programa&ccedil;&atilde;o construida na web, para web. Sendo utilizada em larga escala e abrangendo mais de 70% dos sites na internet.
+					</p>
 
-  100% { -o-transform: perspective(400px) rotateX(0deg); } }
+					<aside class="notes">
+					
+					</aside>
+				</section>
 
-@keyframes flipInX {
-  0% { transform: perspective(400px) rotateX(90deg);
-       opacity: 0; }
+				<!-- Example of nested vertical slides -->
+				    <section>
+						<h2><img src="logo-phpse.png" style="border: 0;box-shadow: none;				background: transparent;" ></h2>
+						<p>
+							O PHPSE &eacute; o grupo de usu&aacute;rios da linguagem PHP oficial do estado de Sergipe. Reconhecido pela Zend - The php company e PHP Brasil Comunidades.<br /><a href="http://www.phpse.net" target="_blank" >www.phpse.net</a>
+						</p>
+						<a href="#" class="image navigate-down">
+						
+						</a>
+					</section>
+					
+					<section>
+						<h2>CodePhant</h2>
+						<p>
+							O CodePhant &eacute; uma iniciativa do grupo de usu&aacute;rios PHP de Sergipe, que tem como objetivo unir e encorajar desenvolvedores da linguagem php no estado.<a href="#" class="navigate-down"></a>
+						</p>
+						<a href="#" class="image navigate-down">
+						
+						</a>
+					</section>
+					
+				<section>
+					<h2>O queremos?</h2>
+					<ol>
+					    <li class="fragment">Pretendemos ser refer&ecirc;ncia em evento PHP no estado.</li>
+					    <li class="fragment">Divulgar e estimular o uso do php profisionalmente.</li>
+					    <li class="fragment">Criar um vinculo entre empresas e desenvolvedores.</li>
+					    <li class="fragment">Estimular o debate e a formação de conhecimento técnico</li>
+					                <li class="fragment">Criar um bom ambiente para a troca de experiência e conhecimento e expandir a rede de negócios dos participantes</li>
+					</ol>
+				</section>
 
-  30% { transform: perspective(400px) rotateX(-10deg); }
+			    <section>
+			                 <h2>Atividades</h2>
+			                 <ul>
+			                 <li class="fragment">Palestras</li>
+			                 <li class="fragment">Quiz</li>
+			                 <li class="fragment">Sorteios</li>
+			                 <li class="fragment">Coffe Break</li>
+			                 <li class="fragment">PHPinga</li>
+			                 </ul>
+			             </section>
+			                                      <section>
+			                                          <h2>Palestrantes</h2>
+			                                          <h5>Augusto Pascutti</h5>
+			                                          
+			             <pre><code class="php"><img src="augusto-pascutti.jpg"  style="float:left;"/>  $p = new codePhant\Palestrante('Augusto Pascutti');
+  $p->from('S&atilde;o Paulo')
+    ->group('PHP SP')
+    ->description('ZCE, Co-fundador PHPSP, 
+                   desenvolvedor web, 
+        		   entusiasta de software livre 
+        		                    e evangelista do XKCD.');
+			             </code></pre>
+			              </section>
+			                                      <section>
+			                                       <h2>Palestrantes</h2>
+			                                       <h5>Alexandre Gaigalas</h5>
+			                                                                   
+			                                      <pre><code class="php"><img src="alganet.jpg"  style="float:left;"/>   $p = new codePhant\Palestrante('Alexandre Gaigalas');
+   $p->from('S&atilde;o Paulo')
+     ->group('Yahoo!, PHP SP')
+     ->description('Desenvolvedor no Yahoo! 
+                    Brasil e fanboy da Web');
+			                                      </code></pre>
+                                                  </section>
+                                                  
+                                                  <section>
+                                                    <h2>Palestrantes</h2>
+                                                    <p>Ainda abriremos inscri&ccedil;&otilde;es para palestrantes locais poderem participar.</p>
+                                                  </section>
+                                                  <section>
+                                                   <h2>QUIZ</h2>
+                                                   <p>Dinamica de grupos tendo como base o Amidala Project, com premia&ccedil;&atilde;o de cursos para a dupla ganhadora.</p>
+                                                  </section>                                                        
+                                                  <section>
+                                                   <h2>Sorteios</h2>
+                                                   <p>Sorteio de brinde entre todos os que participaram do evento.</p>
+                                                  </section>                                                  
+                                                  <section>
+                                                   <h2>Coffe Break</h2>
+                                                  </section>
+                                                  <section>
+                                                     <h2>PHPinga</h2>
+                                                     <p>o PHPinga é a confraternização pós-evento ou encontro da comunidade, num barzinho qualquer para bater papo, se divertir  e reforçar o networking.</p>
+                                                </section>
+			                                      
 
-  70% { transform: perspective(400px) rotateX(10deg); }
+                
+                  <section>
+                        <h2>Expectativa de Audiência</h2>
+                        <p>Profissionais e estudantes que já utilizam PHP, incluindo assuntos de níveis    iniciante, intermediário e avançado, bem como assuntos gerais.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>Audiência</h2>
+                        <p>100/150 conferencistas.</p>
+                    </section>
+                
+                    <section>
+                        <h2>Data de Realização</h2>
+                        <p>14 de Setembro.</p>
+                    </section>
+                
+				<section>
+					<h3>O que eu ganho com isso?</h3>
+					<p class="fragment">Visibilidade de mercado entre os desenvolvedores web</p>
+					<p class="fragment">Oportunidades de interagir com outras empresas</p>
+					<p class="fragment">Aportunidade de divulgar sua marca e/ou produtos</p>
+					<p class="fragment">Valorização do seu produto</p>
+                    <p class="fragment">Possibilidade de associar valores sociais, melhorando a imagem da empresa</p>
+				</section>
 
-  100% { transform: perspective(400px) rotateX(0deg); } }
 
-.animated {
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill: both;
-  -moz-animation-fill: both;
-  -ms-animation-fill: both;
-  -o-animation-fill: both;
-  animation-fill: both; }
+				<section id="transitions">
+					<h3>patroc&iacute;nio bronze</h3>
+					<ul>
+					    <li class="fragment"><strong>Valor:</strong> R$ 300.00</li>
+					    <li class="fragment">Banner rotativo no site do phpse.net at&eacute; a data do evento</li>
+					    <li class="fragment">Mencionado no evento</li>
+					    <li class="fragment">Logotipo em panfletos</li>
+					</ul>
+				</section>
+				
+				<section >
+					<h3>patroc&iacute;nio prata</h3>
+					<ul>
+					    <li class="fragment"><strong>Valor:</strong> R$ 400.00</li>
+					    <li class="fragment">Banner rotativo no site do phpse.net at&eacute; a data do evento</li>
+					    <li class="fragment">Mencionado no evento</li>
+					    <li class="fragment">Logotipo em panfletos</li>
+					    <li class="fragment">Logotipo em camisas</li>
+					    <li class="fragment">Divulgado em nossas redes sociais</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>patroc&iacute;nio ouro</h3>
+					<ul>
+					    <li class="fragment"><strong>Valor:</strong> R$ 500.00</li>
+					    <li class="fragment">Banner rotativo no site do phpse.net at&eacute; a data do evento</li>
+					    <li class="fragment">Mencionado no evento</li>
+					    <li class="fragment">Logotipo em panfletos</li>
+					    <li class="fragment">Logotipo em camisas</li>
+					    <li class="fragment">Divulgado em nossas redes sociais</li>
+					    <li class="fragment">Divulgado em outras m&iacute;dias</li>
+					    <li class="fragment">Vincula&ccedil;&atilde;o com o PHPSE</li>
+					    <li class="fragment">Poster no evento (feito pela empresa)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>Parcerias</h3>
+					<ul>
+					    <li class="fragment"><strong>Estamos abertos a propostas</strong></li>
+					</ul>
+				</section>
 
-.flipInX {
-  -webkit-animation-name: flipInX;
-  -moz-animation-name: flipInX;
-  -ms-animation-name: flipInX;
-  -o-animation-name: flipInX;
-  animation-name: flipInX; }
+				<section id="themes">
+					<h2>Opcionais</h2>
+					<img src="url.png" width="200" style="border: 0;box-shadow: none;				background: transparent;" />
+					<p>Ponto de venda</p>
+					<p>
+						<small>
+							* Sua empresa se encarregar&aacute; de vender certa quantidade de camisas para os participantes do evento.  <code>(ponto de venda)</code>.
+						</small>
+					</p>
+				</section>
 
-/* =============================================== /*
-/*                                                 /* 
-/*                     Messages                    /*
-/*                                                 /*
-/* =============================================== */
+		
+                <section>
+					
+					<p>
+					    <img src="respect.jpg" />
+					    <br />
+						<small>O Respect &eacute; patrocinador oficial do codePhant</small>
+					</p>
+				</section>
 
-#messages {
-  position: relative;
-  margin: 50px auto;
-  padding: 0;
-  width: 800px;
-  list-style: none; }
+				<section>
+					<h1></h1>
+					<p>	<img src="codePhant_bgWhite.png" style="border: 0;float:left; margin-top:0;box-shadow: none;				background: transparent;" /> <img src="logo-phpse.png" style="border: 0;box-shadow: none;				background: transparent;" /></p>
+				</section>
 
-#messages li {
-  float: left;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px dashed #c8c7b4; }
-
-#messages li:nth-child(2n) .infos {
-  float: right;
-  margin-left: 20px; }
-
-#messages li:nth-child(2n) .infos a {
-  -webkit-box-shadow: 1px 1px 0 1px rgba(90, 81, 15, 0.2);
-  -moz-box-shadow: 1px 1px 0 1px rgba(90, 81, 15, 0.2);
-  box-shadow: 1px 1px 0 1px rgba(90, 81, 15, 0.2);
-  left: inherit; }
-
-#messages li:nth-child(2n) .content { border-width: 1px 3px 4px 4px; }
-
-#messages li:nth-child(2n) .content:after,
-#messages li:nth-child(2n) .content:before {
-  right: -9px;
-  left: inherit;
-  -webkit-transform: rotate(41deg);
-  -moz-transform: rotate(41deg);
-  -o-transform: rotate(41deg);
-  transform: rotate(41deg); }
-
-#messages li:nth-child(2n) .facebook { right: -10px; }
-
-#messages li:nth-child(2n) .twitter { right: -5%; }
-
-#messages li:nth-child(2n) .github { right: -1%; }
-
-#messages .infos {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  position: relative;
-  float: left;
-  padding: 3px;
-  width: 130px;
-  height: 130px;
-  border: 5px solid #c8c7b4; }
-
-#messages .infos a {
-  -webkit-border-radius: 17px;
-  -moz-border-radius: 17px;
-  -ms-border-radius: 17px;
-  -o-border-radius: 17px;
-  border-radius: 17px;
-  -webkit-box-shadow: -1px 1px 0 1px rgba(90, 81, 15, 0.2);
-  -moz-box-shadow: -1px 1px 0 1px rgba(90, 81, 15, 0.2);
-  box-shadow: -1px 1px 0 1px rgba(90, 81, 15, 0.2);
-  position: absolute;
-  width: 20px;
-  height: 22px;
-  background-color: #d5d2a8;
-  color: #fff;
-  text-decoration: none;
-  text-indent: -10000px;
-  font-size: 11px; }
-
-#messages .infos a:hover {
-  padding: 0 10px 0 18px;
-  width: auto;
-  border: none;
-  text-indent: 0;
-  opacity: 0.95; }
-
-#messages img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  width: 100%; }
-
-/* =============================================== /*
-/*                                                 /* 
-/*      + SVG sprite (social media icons ).        /*
-/*      + You can use PNG if your navigator don't  /*
-/*        support SVG format.                      /*
-/*                                                 /*
-/* =============================================== */
-
-.sprite {
-  background: url("images/sprite.svg") no-repeat;
-  background-size: 23px; }
-
-.twitter {
-  background-position: -1px 5px;
-  top: 16%;
-  left: -5%; }
-
-.twitter:hover { background-color: #2094dd !important; }
-
-.facebook {
-  background-position: -2px -27px;
-  top: 42%;
-  left: -10%; }
-
-.facebook:hover { background-color: #3b5998 !important; }
-
-.github {
-  background-position: -2px -10px;
-  bottom: 17%;
-  left: -1%; }
-
-.github:hover { background-color: #444 !important; }
-
-.content {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  position: relative;
-  float: left;
-  margin-left: 20px;
-  padding: 15px 25px;
-  width: 510px;
-  border-width: 1px 4px 4px 3px;
-  border-style: solid;
-  border-color: #c8c7b4;
-  background-color: #ece5bd;
-
-/* ==================================================================== /*
-/*                                                                      /* 
-/*   + Css Patterns from : http://lea.verou.me/css3patterns/            /* 
-/*   + Arbaoui mehdi : Fix a gradient color bug in OPERA,FIREFOX        /*
-/*     and SAFARI (only new versions)                                   /*
-/*                                                                      /*
-/* ==================================================================== */
-
-  background-image: -linear-gradient(0deg, transparent 18px, #dbada9 0, #dbada9 20px, transparent 19px),
-                    -linear-gradient(#e1dab0 0.1em, transparent 0.1em);
-  background-image: -webkit-linear-gradient(0deg, transparent 11px, #dbada9 0, #dbada9 14px, transparent 12px),
-                    -webkit-linear-gradient(#e1dab0 0.1em, transparent 0.1em);
-  background-image: -moz-linear-gradient(0deg, transparent 11px, #dbada9 0, #dbada9 13px, transparent 12px),
-                    -moz-linear-gradient(#e1dab0 0.1em, transparent 0.1em);
-  background-size: 100% 10px;
-  color: #333;
-
-}
-
-/* ====================================================================================== /*
-/*                                                                                        /* 
-/*   + Talk bubble with shadow                                                            /* 
-/*     From http://forrst.com/posts/How_to_Make_a_Pure_CSS_Speech_Bubble_With_a_Drop-PU1  /*
-/*   + Arbaoui mehdi: Change position (to left and right) of arrow                        /*
-/*                                                                                        /*
-/* ====================================================================================== */
-
-.content:after, .content:before {
-  border-bottom: 23px solid transparent;
-  border-right: 20px solid #ece5bd;
-  top: 49px;
-  content: '';
-  position: absolute;
-  left: -9px;
-  -webkit-transform: rotate(220deg);
-  -moz-transform: rotate(220deg);
-  -o-transform: rotate(220deg);
-  transform: rotate(220deg); }
-
-.content h3 {
-  font: 23px "Satisfy";
-  margin: 0;
-  padding: 0;
-  font-weight: normal; }
-
-.content p {
-  margin: 10px 0 0 0;
-  font-size: 15px;
-  line-height: 1.7em; }
-
-.content p a {
-  text-decoration: none;
-  background-color: #f7f3c5;
-  border-bottom: solid 1px #cfcebe;
-  color: #834202;
-  padding: 1px 4px; }
-
-.content p a:hover { background-color: #f5ec82; }
-
-.content b {
-  display: block;
-  color: #75280c;
-  font: italic normal 17px Georgia; }
-
-.content:before {
-  top: 48px;
-  left: -11px;
-  border-right: 19px solid rgba(0, 0, 0, 0.1); }
-	</style>
-</head>
-<body>
-
-	<ul id="messages">
-
-		<!-- 1 -->
-		<li>
-			<div class="infos">
-				<img src="https://secure.gravatar.com/avatar/8f98e205dd6ab066dbf53f21b2f2bc15?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" alt="" title="by tresMunkeys" />
-				<a href="http://twitter.com/malukenho" class="sprite twitter">@malukenho</a>
-				<a href="http://www.facebook.com/malukenho" class="sprite facebook">malukenho</a>
-				<a href="http://github.com/malukenho" class="sprite github">@malukenho</a>
 			</div>
-			<div class="content">
-				<h3>
-					Jefersson Nathan <small>(Malukenho)</small>
-					<b>Desenvolvedor Web</b>
-				</h3>
-				<p>
-					Fundador do grupo de usuários <a href="#">PHP SERGIPE</a>, é extremamante apaixonado por php. entusiasta por software livre...
-					Atualmente trabalha em uma empresa com foco em soluções web.
-				</p>
-			</div>
-		</li>
-		<!-- 2 -->
-		<li>
-			<div class="infos">
-				<img src="images/4531285963_cd28f61b16_q.jpg" alt=""  title="by tresMunkeys" />
-				<a href="http://twitter.com/webodream" class="sprite twitter">@webodream</a>
-				<a href="http://www.facebook.com/groups/115089745169149" class="sprite facebook">depot.webdesigner</a>
-				<a href="http://github.com/arbaoui-mehdi" class="sprite github">@arbaoui-mehdi</a>
-			</div>
-			<div class="content">
-				<h3>
-					Edmundo I. Jacobi
-					<b>webdeveloper</b>
-				</h3>
-				<p>
-					Lorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillumLorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillumLorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillumLorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing.
-				</p>
-			</div>
-		</li>
-		<!-- 1 -->
-		<li>
-			<div class="infos">
-				<img src="images/4817542998_55a7eb8d8b_q.jpg" alt="" title="by tresMunkeys" />
-				<a href="http://twitter.com/rbispo24" class="sprite twitter">@rbispo24</a>
-				<a href="http://www.facebook.com/raquelbispo21" class="sprite facebook">raquelbispo21</a>
-				<a href="http://github.com/arbaoui-mehdi" class="sprite github">@arbaoui-mehdi</a>
-			</div>
-			<div class="content">
-				<h3>
-					Raquel Bispo
-					<b>Estudante de Estatística</b>
-				</h3>
-				<p>
-					Membro, responsável pela redes socias e colaboradora do grupo PHP Sergipe. Atualmente trabalha como suporte de web na Swapi Agência Digital , apaixonada por redes socias e Software livre, desafiada  a aprender coisas novas.
-				</p>
-			</div>
-		</li>
-		<!-- 2 -->
-		<li>
-			<div class="infos">
-				<img src="images/4531285963_cd28f61b16_q.jpg" alt=""  title="by tresMunkeys" />
-				<a href="http://twitter.com/rbispo24" class="sprite twitter">@rbispo24</a>
-				<a href="http://www.facebook.com/raquelbispo21" class="sprite facebook">raquelbispo21</a>
-				<a href="http://github.com/arbaoui-mehdi" class="sprite github">@arbaoui-mehdi</a>
-			</div>
-			<div class="content">
-				<h3>
-					Edmundo I. Jacobi
-					<b>webdeveloper</b>
-				</h3>
-				<p>
-					Lorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillumLorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillumLorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillumLorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing.
-				</p>
-			</div>
-		</li>
 
-		<!-- 3 -->
-		<li>
-			<div class="infos">
-				<img src="images/3873098259_61c446da22_q.jpg" alt="" title="by tresMunkeys" />
-				<a href="http://twitter.com/webodream" class="sprite twitter">@webodream</a>
-				<a href="http://www.facebook.com/groups/115089745169149" class="sprite facebook">depot.webdesigner</a>
-				<a href="http://github.com/arbaoui-mehdi" class="sprite github">@arbaoui-mehdi</a>
-			</div>
-			<div class="content">
-				<h3>
-					Lisa J. Escoto
-					<b>webdesigner </b>
-				</h3>
-				<p>
-					Lorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillum in occaecat adipisicing ullamco cillum in occaecat proident commodo in <a href="http://www.google.com">http://www.google.com</a>. 
-				</p>
-			</div>
-		</li>
+		</div>
 
-		<!-- 4 -->
-		<li>
-			<div class="infos">
-				<img src="images/3446830982_c8b55cc7e8_q.jpg" alt="" title="by tresMunkeys" />
-				<a href="http://twitter.com/webodream" class="sprite twitter">@webodream</a>
-				<a href="http://www.facebook.com/groups/115089745169149" class="sprite facebook">depot.webdesigner</a>
-				<a href="http://github.com/arbaoui-mehdi" class="sprite github">@arbaoui-mehdi</a>
-			</div>
-			<div class="content">
-				<h3>
-					June Schreiber
-					<b>CEO &amp; Founder</b>
-				</h3>
-				<p>
-					Phasellus pharetra, libero sed egestas condimentum, ligula nibh cursus turpis, sed convallis odio lorem sit amet ligula. Suspendisse dapibus nibh nec augue placerat eleifend sit amet nec purus. Donec consectetur cursus quam eu bibendum. Nam est nisi, tincidunt mattis luctus sit amet, faucibus luctus odio. Nam placerat mauris libero. Integer fringilla nisl vitae velit lacinia eget sagittis diam feugiat. Ut et scelerisque dolor. Phasellus luctus tellus nec augue laoreet non suscipit orci condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eros felis, eleifend ut fringilla sit amet, vestibulum eu ligula. In venenatis aliquet tristique. Fusce tempor tincidunt adipiscing. In fermentum tincidunt purus eu tristique. Integer semper, eros et accumsan porta, purus arcu vehicula massa, quis facilisis nibh nisi non mi.
-				</p>
-			</div>
-		</li>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
 
-		<!-- 5 -->
-		<li>
-			<div class="infos">
-				<img src="images/3663734351_f9cb5a6a56_q.jpg" alt="" title="by tresMunkeys" />
-				<a href="http://twitter.com/webodream" class="sprite twitter">@webodream</a>
-				<a href="http://www.facebook.com/groups/115089745169149" class="sprite facebook">depot.webdesigner</a>
-				<a href="http://github.com/arbaoui-mehdi" class="sprite github">@arbaoui-mehdi</a>
-			</div>
-			<div class="content">
-				<h3>
-					Benita M. Futral
-					<b>CEO &amp; Founder</b>
-				</h3>
-				<p>
-					Lorem ipsum non minim Excepteur Duis sunt labore ut laborum sit ullamco sed ex.Lorem ipsum dolor adipisicing ullamco cillum
-				</p>
-			</div>
-		</li>
+		<script>
 
-	</ul>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
 
-</body>
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
 </html>
