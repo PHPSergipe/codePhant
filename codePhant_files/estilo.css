@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+*{margin:0;padding:0;font-family: 'Didact Gothic', sans-serif; font-size: 18px}
+
+   ::-moz-selection
+   {color: #58585a;
+   background: #d8e027;}
+
+  ::selection
+   {color: #58585a;
+   background: #d8e027;}
+   
+body{background:#333;height:100%;overflow-y:scroll;overflow-x:hidden;}
+img{border:0;}
+.clear{clear:both;}
+/* LINKS */
+a:link,a:active,a:visited{color:#FFF;text-decoration:none;}
+a:hover{color:#FFF;text-decoration:underline;}
+
+
+/******************************************************************/
+/****************************** LIGHTBOX **************************/
+/******************************************************************/
+#TM_lightbox {}
+#TM_lightbox_cont {}
+#TM_lightbox_opp {}
+#TM_lightbox_env {border-radius:15px;}
+#TM_lightbox_img {}
+#TM_lightbox_top {}
+#TM_lightbox_close {background-image:url(../images/fechar.png);width:39px;height:39px;bottom:30px;right:30px;}
+#TM_lightbox_close:hover {background-position:0 39px;cursor:pointer;}
+
+/*************DIVS PRINCIPAIS**********/
+#esquerda{width:320px;float:left;position:absolute;position:absolute;}
+#direita{float:left;position:absolute;z-index:999;overflow:hidden;margin-left:280px;max-width:900px;margin-top:40px;padding-bottom:30px;}
+/***************CONTEUDO FIXO*************************/
+.tituloSite{font:16px 'Didact Gothic';color:#393526;text-transform:uppercase;font-weight: 700;font-size: 30px;float:left;margin-bottom:16px\9;}
+.tituloSite > span{color: #000 !important;}
+.tituloPortfolio{text-transform:uppercase;margin-top:10px;font:24px futurikazoo;color:#48411d;}
+.tituloAssunto{margin-top:20px;font:22px futura;letter-spacing:-1px;text-transform:uppercase;color:#fff;}
+.textoBack{font:15px futurikazoo;color:#fff;margin:12px 0 4px;}
+.texto{color: #000;}
+/***********************CURSORES HOVER***************************************/
+#logoKazoo:hover,.menuOpt:hover,.menuSub:hover,.midiaSocial:hover,.verProjeto:hover,.txtOptList:hover,.iconesPortfolio .icon:hover,.botaoForm:hover{cursor:pointer;}
+/***********MÁSCARA QUADRICULADA ************/
+#maskScreen{width:100%;min-height:100%;background:url(../images/maskBack.png) repeat;position:fixed;z-index:0;}
+/*************LOGO KAZOO ***************/
+#logoKazoo{width:135px;height:65px;background:url(../images/agenciaKazoo.png) no-repeat;position:absolute;margin-top:40px;margin-left:40px;}
+/************MENU PRINCIPAL E SUBMENU************************/
+#menu{position:relative;margin-top:190px;margin-left:2px;}
+.menuOpt{text-transform:uppercase;background:url(../images/menuImg.png) no-repeat 0 24px;padding-left:40px;font:26px skiakazoo;color:#B5B6AF;*margin-top:4px;\0/;margin-top:4px;}
+.menuSubHolder{margin-left:-20px;margin-top:0px;*margin-top:4px;\0/margin-top:2px;overflow:hidden;height:0;width:200px;}
+.menuSub{font:11px skiakazoo;color:#999999;padding:2px;text-transform:uppercase;margin-top:2px;}
+/*************RODAPE************************/
+#rodape{width:100%;height:20px;bottom:50px;left:50px;position:fixed;}
+.tituloST{font:16px skiakazoo;text-transform:uppercase;color:#989484;}
+.linhaSep{background:url(../images/linhaRodape.png) repeat-x;width:100%;height:1px;margin-left:1px;}
+.midiaSocial{width:27px;height:26px;margin-top:4px;margin-right:8px;float:left;overflow:hidden;}
+.imgSocial{width:27px;height:52px;}
+#twitter{background:url(../images/twitter.png) no-repeat;}
+#facebook{background:url(../images/facebook.png) no-repeat;}
+#flickr{background:url(../images/flickr.png) no-repeat;}
+#youtube{background:url(../images/youtube.png) no-repeat;}
+/*********************CONTEUDOS PRINCIPAIS******************************************/
+#conteudoPortfolio,#conteudoKazoo,#conteudoContato,#conteudoContato,#conteudoClipping,#conteudoClientes{margin-top:1px;}
+/**************CONTEUDO INDEX ****************/
+#conteudoIndex{font:34px 'Didact Gothic';;text-transform:uppercase;color:#CCCCCC;}
+/**************PORTFOLIO **************/
+.iconesPortfolio{height:41px;margin-top:14px;margin-bottom:30px;}
+.iconesPortfolio .icon{width:42px;height:41px;float:left;margin-right:6px;}
+.holderImagemPortfolio{margin-top:16px;}
+.verProjeto{background:#58585a url(../images/setaProjeto.png) no-repeat 6px 7px;float:left;font:14px futurikazoo;color:#fff;padding:0px 8px 0px 26px;height:20px;margin-top:10px;clear:both;padding-top:3px\9;height:16px\9;}
+.verProjeto:hover a {color:#000;}
+.verProjeto a {text-decoration:none;}
+/*********************EQUIPE******************************/	
+.tituloEquipe{font:16px skiakazoo;text-transform:uppercase;color:#393526}
+.videoPlayer{margin-top:14px;float:left;}
+.equipe{float:left;margin-top:24px;}
+.holderInfoPessoa{margin-top:20px;float:left;margin-bottom:20px;}
+.holderBlackBox{width:182px;height:198px;margin-bottom:10px;}
+.infoPessoa{margin:0px 0 0 20px;}
+.infoPessoaTxt{background:#58585a;font:14px futurikazoo;color:#fff;padding:3px;}
+.holderSocial{margin:10px 0 0 20px;}
+.socialInfo{width:19px;height:19px;float:left;margin-right:4px;}
+/**********************CONTATO ********************************/
+.holderFormulario{margin-top:20px;width:430px;float:left;}
+.blocoCampo1{width:204px;float:left;margin-right:10px;}
+.descFormulario{text-transform:uppercase;background:#58585a;font:12px futurikazoo;color:#FFF;padding:0 3px;float:left;}
+.campoForm{border:1px solid #58585a;font:20px Verdana, Arial, Helvetica, sans-serif;margin-top:4px;background:url(../images/fundoInput.png) repeat;color:#666666;width:200px;}
+.msgContato{width:414px; resize:none;height:200px;overflow:auto;}
+.conecte{width:236px;float:left;margin-top:10px;margin-left:4px;}
+.tituloConecte{font:14px futurikazoo;font-style:italic;color:#5f5c52;text-transform:uppercase;margin-top:10px;}
+.listContato{width:236px;}
+.optList{font:12px futurikazoo;text-transform:uppercase;color:#FFFFFF;}
+.txtOptList{background:#58585a;padding:1px 4px;}
+.txtOptList a:hover{color:#333333;text-decoration:none;}
+.txtOptList a{color:#FFFFFF;text-decoration:none;}
+
+.textoContato{font:12px futurikazoo;text-transform:uppercase;color:#FFFFFF;background:#58585a;padding:1px 4px;}
+.botaoForm{width:60px;height:24px;color:#000;float:left;text-align:center;font:14px futurikazoo;margin-top:8px;margin-right:10px;}
+.hiddenFields{display:none;}
+/********************************CLIPPING*******************/
+.clip{margin-top:0;*margin-top:-18px;}
+.infoClip{margin-top:10px;font:20px futura; font-style:italic;text-transform:uppercase;color:#393526;margin-bottom:10px;}
+.clip p{margin:16px 0;}
+.clip a{color:#e5d8a4;text-decoration:none;}
+.clipText{background:#58585a;font:14px futurikazoo;color:#FFFFFF;padding:0 8px 4px 0px;}
+.separadorClip{background:url(../images/linhaRodape.png) repeat-x;width:100%;height:1px;margin-left:1px;margin-top:30px;padding-bottom:30px;float:left;clear:both;}
+/******************************CLIENTES ***********************/
+#holderClientes{margin-top:60px;width:680px;margin-bottom:90px;}
+#coluna1{float:left;width:214px;margin-right:12px;}
+#coluna2{float:left;width:214px;margin-right:12px;}
+#coluna3{float:left;width:214px;margin-right:12px;}
+.clienteConteudo{width:213px;height:177px;margin-top:12px;position:relative;overflow:hidden;}
+.clienteHidden{width:213px;height:366px;background:#fff;}
+.imagemCliente{width:213px;height:177px;}
+.holderImagemCliente{width:213px;height:177px;overflow:hidden;}
+.infoCliente{margin:20px 4px 10px 4px;}
+.imgCliente{margin-top:0px;}
+.clienteConteudo h1{font:14px futurikazoo;color:#666666;text-transform:uppercase;line-height:16px;margin-top:-10px;}
+.clienteConteudo h2{font:16px futurikazoo;color:#333333;text-transform:uppercase;font-weight:bold;line-height:16px;}
+.clienteConteudo p{color:#666666;font:14px futurikazoo;line-height:13px;margin-top:16px;}
+.loaderPort {width:50px;display:none;text-align:center;margin:0 auto;padding:10px;border-radius:15px;background-color:#fff;}

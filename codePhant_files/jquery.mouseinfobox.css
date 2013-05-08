@@ -1,0 +1,22 @@
+/* 
+    Document   : mouseinfobox
+    Created on : 19 août 2011, 21:19:53
+    Author     : Ravenz
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.infoBox {
+  position: absolute;
+  z-index:999;
+}
+
+.infoBox > div {
+	font:20px futura;
+	font-style:italic;
+	background: #DDD;
+	color: #333;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 10px;
+}

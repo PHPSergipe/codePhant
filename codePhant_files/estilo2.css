@@ -1,0 +1,14 @@
+img {
+	border: 0;
+	width: 80%;
+}
+
+.menu-container {
+	margin-top: 75px;
+	margin-left: 10px;
+	list-style: none;
+}
+.menuOpt{
+	font-size: 18px;
+	color: #006699;
+}
