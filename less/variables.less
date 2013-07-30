@@ -1,0 +1,91 @@
+// Core
+@section-padding:		45px;
+
+// Colors -----------------
+@white:		    	#ffffff;
+@black: 		      	#000000;
+@light-grey:		      	#e3dedb;
+@med-grey:                     	#DEDCDD;
+@dark-grey:                     	#6D7373;
+
+@body-text-dark:	       	#4b4f50;
+@body-text-light:              	@white;
+@body-title-light:              	@white;
+@body-title-dark:              	@black;
+
+@logo-background:           	#222222;
+
+// Form Feedbacks --------------
+@warning-text:             	#c09853;
+@warning-background:       	#fcf8e3;
+@warning-border:           	darken(spin(@warning-background, -10), 3%);
+
+@error-text:               	#b94a48;
+@error-background:         	#f2dede;
+@error-border:             	darken(spin(@error-background, -10), 3%);
+
+@success-text:             	#468847;
+@success-background:       	#dff0d8;
+@success-border:           	darken(spin(@success-background, -10), 5%);
+
+@info-text:                		#3a87ad;
+@info-background:          	#d9edf7;
+@info-border:              	darken(spin(@info-background, -10), 7%);
+
+// Fonts -----------------------------
+@base-font-size:                	14px;
+@base-line-height:              	20px;
+
+@font-face {
+	font-family: 'Novecento';
+	src: url('../fonts/novecentowide-normal-webfont.eot');
+	src: url('../fonts/novecentowide-normal-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/novecentowide-normal-webfont.woff') format('woff'),
+	url('../fonts/novecentowide-normal-webfont.ttf') format('truetype'),
+	url('../fonts/novecentowide-normal-webfont.svg#Novecento') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NovecentoBold';
+	src: url('../fonts/novecentowide-bold-webfont.eot');
+	src: url('../fonts/novecentowide-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/novecentowide-bold-webfont.woff') format('woff'),
+	url('../fonts/novecentowide-bold-webfont.ttf') format('truetype'),
+	url('../fonts/novecentowide-bold-webfont.svg#NovecentoBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@alerion-font-regular:    	'Novecento', Helvetica, Arial, sans-serif;
+@alerion-font-bold:    		'NovecentoBold', Helvetica, Arial, sans-serif;
+@mono-font-family:        	Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Base Menu variables
+@menu-font-family:		Arial, Helvetica, sans-serif;
+@menu-font-size:		11px;
+@menu-line-height:		21px;
+@menu-item-radius:		4px;
+
+// Horizontal forms & lists
+// -------------------------
+@horizontal-component-offset:       160px;
+
+// Menu variables
+@menu-text-color:		#d4d0cd;
+@menu-text-shadow:		fade(#000000, 60%);
+@menu-text-hover:		@white;
+@menu-sub-text-color:	lighten(@menu-text-color, 10%);
+@menu-arrow-color:		lighten(@menu-text-color, 20%);
+@menu-drop-back:		fade(@black, 80%);
+@menu-mobile-gradient:	lighten(@menu-drop-back,10%);
+@menu-mobile-back:		@menu-drop-back;
+@menu-border: 		#555;
+@menu-drop-shadow:	0px 2px 2px rgba(0,0,0,0.1);
+@menu-inset-shadow:		~"inset 0 4px 25px rgba(0,0,0,0.2)";
+@menu-full-shadow:		~"0px 1px 3px rgba(0,0,0,0.3)";
+@menu-active-border:	#777;
+@menu-active-back:		fade(#3cb2ce, 80%);
+@menu-active-shadow:	~"inset 0px 1px 2px rgba(0,0,0,0.1), 0px 1px 1px rgba(225,225,225,0.1)";
+@module-header-color:	@menu-text-color;
+@module-text-color:		lighten(@menu-text-color, 10%);

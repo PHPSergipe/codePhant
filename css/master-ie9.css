@@ -1,0 +1,29 @@
+/**
+* @version   $Id: master-ie9.css 8881 2013-03-28 17:03:21Z josh $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+.readon, .rt-block {
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
+}
+.pagination ul li a {filter: none;}
+
+ul.menu li.active.current > a:before, ul.menu li.active.current > .item:before, ul.menu li.active.current > .separator:before,
+ul.menu #current.active > a:before, ul.menu #current.active > .item:before, ul.menu #current.active > .separator:before {font-size: 15px;}
+
+/* Navigation */
+.gf-menu.l1 > li.active .rt-item-shadow {z-index: -1;}
+.dropdown {zoom: 1;}
+.gf-menu.l1 > li.active > .item {zoom: 1;}
+.gf-menu li.modules:hover, .gf-menu .dropdown ul li:hover {filter: none;}
+
+/* Social Icons */
+.rt-social-buttons .social-button {filter: none;}
+
+/* Logo */
+.rt-logo-ribbon, .logo-block {z-index: 99999999;zoom: 1;}
+.logo-type-alerion #rt-logo {height: 74px;}
+
+#rt-header {filter: none;background-color: rgba(0,0,0,0.9);}

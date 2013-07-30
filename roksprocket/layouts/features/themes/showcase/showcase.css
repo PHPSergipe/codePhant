@@ -1,0 +1,32 @@
+/* Features - Layout Showcase - Core */
+.layout-showcase {position: relative;-webkit-backface-visibility: hidden;}
+.layout-showcase:after {display: table;content: "";*zoom: 1;clear: both;}
+.layout-showcase ul {list-style: none !important;margin: 0;padding: 0;}
+
+/* Features - Layout Showcase - Content */
+.pagination-active {margin-bottom: 35px;}
+.layout-showcase .sprocket-features-list {position: relative;overflow: hidden;padding: 0 !important;}
+.layout-showcase .sprocket-features-list li {position: absolute;top: 0;left: 0;opacity: 0;width: 100%;height: 100%;display: none;}
+.layout-showcase .sprocket-features-list li.active {position: static;height: auto;opacity: 1;display: block;}
+.arrows-active .sprocket-features-list {margin-left: 40px;margin-right: 40px;}
+.layout-showcase .sprocket-features-img-container img {float: left;margin-right: 25px;}
+.layout-showcase .readon {margin-top: 15px;}
+
+/* Features - Layout Showcase - Navigation */
+.layout-showcase .sprocket-features-arrows {position: absolute;right: 0;bottom: -30px;z-index: 10;border-radius: 6px;overflow: hidden;}
+.layout-showcase .sprocket-features-arrows .arrow {display: block;top: 50%;cursor: pointer;z-index: 10;text-align: center;font-size: 2em;padding: 10px 20px;}
+.layout-showcase .sprocket-features-arrows .arrow.next {border-radius: 6px 6px 0 0;}
+.layout-showcase .sprocket-features-arrows .arrow.prev {border-radius: 0 0 6px 6px;}
+.layout-showcase .sprocket-features-arrows .arrow.next:before {content: '\f105';font-family: FontAwesome;}
+.layout-showcase .sprocket-features-arrows .arrow.prev:before {content: '\f104';font-family: FontAwesome;}
+.layout-showcase .sprocket-features-arrows .arrow span {display: none;}
+.arrows-onhover .sprocket-features-arrows {opacity: 0;}
+.sprocket-features.arrows-onhover:hover .sprocket-features-arrows {opacity: 1;}
+.layout-showcase .sprocket-features-pagination {position: absolute;left: 52px;bottom: 15px;z-index: 10;padding: 0 !important;}
+.layout-showcase .sprocket-features-pagination-hidden {display: none;}
+.layout-showcase .sprocket-features-pagination li {display: inline-block;padding: 5px;border-radius: 1em;cursor: pointer;}
+.layout-showcase .sprocket-features-pagination li span {display: none;font-size: 0.85em;line-height: 1em;}
+.pagination-active .sprocket-features-pagination {bottom: -30px;}
+
+/* Features - Layout Showcase - Transitions */
+.layout-showcase .sprocket-features-pagination li, .layout-showcase .sprocket-features-arrows {-webkit-transition: opacity 0.2s ease-in;-moz-transition: opacity 0.2s ease-in;-o-transition: opacity 0.2s ease-in;transition: opacity 0.2s ease-in;}

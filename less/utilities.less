@@ -1,0 +1,428 @@
+/**
+* @version   $Id: utilities.less 9005 2013-04-01 21:18:42Z josh $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+// Basic Reseting Classes
+body {
+
+	.noitalic {font-style: normal !important;}
+
+	.nobold {font-weight: normal !important;}
+
+	.flush {margin: 0 !important; padding: 0 !important;}
+
+	.nomarginall {margin: 0 !important;}
+
+	.nopaddingall {padding: 0 !important;}
+
+	.nomargintop {margin-top: 0 !important;}
+
+	.nomarginbottom {margin-bottom: 0 !important;}
+
+	.nomarginleft {margin-left: 0 !important;}
+
+	.nomarginright {margin-right: 0 !important;}
+
+	.nopaddingtop {padding-top: 0 !important;}
+
+	.nopaddingbottom {padding-bottom: 0 !important;}
+
+	.nopaddingleft {padding-left: 0 !important;}
+
+	.nopaddingright {padding-right: 0 !important;}
+
+}
+
+#rokajaxsearch {
+	margin: 0;
+}
+#rokajaxsearch > .rokajaxsearch {
+	background: none;
+	box-shadow: none;
+	border: none;
+}
+.rokajaxsearch {
+	.inputbox {
+		border-radius: 2px;
+		background-position: 95% -69px;
+		background-repeat: no-repeat;
+		margin-bottom: 0;
+		padding: 4px 12px;
+		font-size: @base-font-size - 2;
+		width: 70%;
+	}
+	.search_options {
+		margin-top: 8px;
+		padding-bottom: 15px;
+		label {
+			margin-right: 20px !important;
+			input[type="radio"], input[type="checkbox"] {
+				margin: 0 5px 0 0;
+			}
+		}
+	}
+	.clr {
+		clear: both;
+	}
+	.searchintro {
+		overflow: hidden;
+	}
+}
+#roksearch_results {
+	z-index: 10000;
+	position: absolute;
+	width: 400px;
+	float: right;
+	text-align: left;
+	visibility: hidden;
+	border-radius: 2px;
+	margin-top: 5px;
+	.small {
+		display: inline;
+		position: relative;
+		text-align: inherit;
+		bottom: 0;
+		right: 0;
+		font-size: 11px;
+		font-style: italic;
+	}
+	a.clr {
+		font-size: 100%;
+		line-height: 1.6em;
+		height: auto;
+	}
+	h3 {
+		margin-top: 0;
+		margin-bottom: 2px;
+		line-height: 110%;
+		font-size: 110%;
+		padding-bottom: 0;
+	}
+	.container-wrapper {
+		overflow: hidden;
+	}
+	.page {
+		float: left;
+	}
+	.roksearch_header, .roksearch_row_btm {
+		padding: 5px 10px;
+		line-height: 130%;
+		text-transform: none;
+		font-weight: normal;
+		font-size: 12px;
+	}
+	.roksearch_header {
+		border-radius: 3px 3px 0 0;
+	}
+	.roksearch_row_btm {
+		border-radius: 0 0 3px 3px;
+	}
+	.roksearch_row_btm {
+		border-bottom: none;
+		overflow: hidden;
+		span {
+			line-height: 140%;
+		}
+	}
+	.roksearch_even, .roksearch_odd {
+		padding: 10px;
+		border-bottom: none;
+		span {
+			margin-top: 15px;
+			line-height: 140%;
+			&.highlight {
+				margin-top: 0;
+			}
+		}
+	}
+	.viewall {
+		float: left;
+		margin: 0 5px;
+		span {
+			line-height: 130%;
+			text-transform: none;
+		}
+	}
+	.estimated_res {
+		font-size: 9px;
+		font-style: italic;
+		text-transform: none;
+		float:left;
+	}
+	.pagination_res {
+		font-style: normal;
+		float: right;
+		text-transform: none;
+		font-size: 11px;
+		margin-top: -1px;
+	}
+	.powered-by-google {
+		text-transform: lowercase;
+		font-style: italic;
+		font-size: 9px;
+	}
+	.google-search {
+		#roksearch_link {
+			margin-top: 5px;
+		}
+	}
+	.google-thumb-image {
+		margin: 0 auto;
+	}
+	.readon {
+		margin-top: 15px;
+		span, .button {
+			font-size: 13px;
+			line-height: 22px;
+		}
+	}
+	.container-arrows {
+		margin-top: 2px;
+		height: 12px;
+		width: 30px;
+		float: left;
+		margin-right: 5px;
+		position: relative;
+	}
+	.roksearch_wrapper2, .roksearch_wrapper3, .roksearch_wrapper4 {
+		border-radius: 2px;
+	}
+	.roksearch_result_wrapper1 {
+		.transition(background-color 0.3s linear);
+	}
+	#roksearch_link {
+		float: right;
+		padding-right: 0;
+		margin-top: 7px;
+		display: block;
+		height: 16px;
+		width: 16px;
+	}
+	.arrow-left, .arrow-left-disabled, .arrow-right, .arrow-right-disabled {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 0;
+	}
+	.arrow-left {
+		left: 0;
+		cursor: pointer;
+		background-position: 0 2px;
+	}
+	.arrow-left-disabled {
+		left: 0;
+		background-position: 0 -33px;
+	}
+	.arrow-right {
+		left: 18px;
+		cursor: pointer;
+		background-position: 0 -15px;
+	}
+	.arrow-right-disabled {
+		left: 18px;
+		background-position: 0 -33px;
+	}
+}
+
+/* RokMiniEvents */
+.rt-grid-12 .grid1 .rokminievents-item {width: 910px;}
+.rt-grid-12 .grid2 .rokminievents-item {width: 430px;}
+.rt-grid-12 .grid3 .rokminievents-item {width: 270px;}
+.rt-grid-12 .grid4 .rokminievents-item {width: 190px;}
+.rt-grid-12 .grid6 .rokminievents-item {width: 110px;}
+.rt-grid-10 .grid1 .rokminievents-item {width: 750px;}
+.rt-grid-10 .grid2 .rokminievents-item {width: 350px;}
+.rt-grid-10 .grid3 .rokminievents-item {width: 217px;}
+.rt-grid-10 .grid4 .rokminievents-item {width: 150px;}
+.rt-grid-10 .grid6 .rokminievents-item {width: 83px;}
+.rt-grid-8 .grid1 .rokminievents-item {width: 430px;}
+.rt-grid-8 .grid2 .rokminievents-item {width: 270px;}
+.rt-grid-8 .grid3 .rokminievents-item {width: 165px;}
+.rt-grid-8 .grid4 .rokminievents-item {width: 110px;}
+.rt-grid-8 .grid6 .rokminievents-item {width: 57px;}
+.rt-grid-6 .grid1 .rokminievents-item {width: 430px;}
+.rt-grid-6 .grid2 .rokminievents-item {width: 185px;}
+.rt-grid-6 .grid3 .rokminievents-item {width: 110px;}
+.rt-grid-6 .grid4 .rokminievents-item {width: 68px;}
+.rt-grid-6 .grid6 .rokminievents-item {width: 30px;}
+.rokminievents {
+	list-style: none;
+	padding: 0;
+	width: 30000px;
+	margin: 1px;
+}
+.rokminievents-container {
+	overflow: hidden;
+	margin: 0 -10px;
+	padding-bottom: 1px;
+}
+.rokminievents-item {
+	float: left;
+	overflow: hidden;
+	margin: 0 15px;
+	padding: 10px;
+	border-radius: 5px;
+}
+.rokminievents-badge {
+	width: 39px;
+	height: 51px;
+	float: left;
+	margin-right: 15px;
+	text-align: center;
+	padding: 10px;
+	.day {
+		display: block;
+		font-size: 34px;
+		line-height: 32px;
+	}
+	.month {
+		display: block;
+		font-size: 18px;
+		line-height: 18px;
+		text-transform: uppercase;
+	}
+	.year {
+		display: block;
+		font-size: 13px;
+		line-height: 18px;
+		text-transform: uppercase;
+	}
+}
+.showyear {
+	height: 65px;
+	padding: 3px 10px;
+	.day {
+		line-height: 34px;
+	}
+	.month {
+		line-height: 14px;
+	}
+}
+.rokminievents-title, .rokminievents-title-nolink {
+	display: block;
+	font-size: 120%;
+	line-height: 120%;
+	margin: 0 0 5px 0;
+	word-wrap: break-word;
+}
+.rokminievents-title {
+	cursor: pointer;
+}
+.rokminievents-date {
+	display: block;
+	font-size: 110%;
+	cursor: pointer;
+	line-height: 110%;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.rokminievents-time {
+	display: block;
+	font-size: 100%;
+	line-height: 100%;
+	margin-bottom: 5px;
+}
+.rokminievents p {
+	margin-bottom: 0;
+}
+.rokminievents-controls {
+	clear: both;
+}
+.timeline-dates {
+	margin-top: 6px;
+	position: relative;
+}
+.timeline-dates {
+	.active {
+		margin: -2px;
+	}
+}
+.date-inline {
+	height: 18px;
+}
+.date-column {
+	height: 32px;
+}
+.timeline-dates .date {
+	text-align: center;
+	font-size: 10px;
+	line-height: 18px;
+	position: absolute;
+	border-radius: 5px;
+	padding: 0 4px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.timeline-dates.date-inline .date {
+	width: 80px;
+}
+.timeline-dates.date-column .date {
+	width: 45px;
+}
+.timeline-dates.date-column .date span {
+	display: block;
+}
+.rokminievents-wrapper {
+	margin: 0 -10px;
+	.left-arrow {
+		&:before {
+			content: '\f104';
+			font-family: FontAwesome;
+		}
+	}
+	.right-arrow {
+		&:before {
+			content: '\f105';
+			font-family: FontAwesome;
+		}
+	}
+	.left-arrow, .right-arrow {
+		width: 17px;
+		height: 16px;
+		display: inline-block;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		border-radius: 5px;
+	}
+	.arrows {
+		float: right;
+		margin-right: 12px;
+	}
+	.timeline {
+		margin-top: 20px;
+		.progress-wrapper {
+			height: 16px;
+			padding: 0 29px;
+			border-radius: 5px;
+		}
+		.progress {
+			height: 16px;
+			position: relative;
+			.knob {
+				position: absolute;
+				left: 0;
+				width: 10px;
+				height: 10px;
+				top: 3px;
+				cursor: pointer;
+			}
+		}
+	}
+	.arrows-on .timeline {
+		margin-right: 45px;
+	}
+	.rokminievent-page {
+		width: 6px;
+		height: 6px;
+		position: absolute;
+		visibility: hidden;
+		cursor: pointer;
+		border-radius: 100%;
+		top: 5px;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+}

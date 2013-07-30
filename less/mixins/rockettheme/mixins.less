@@ -1,0 +1,492 @@
+/**
+* @version   $Id: mixins.less 9028 2013-04-02 10:06:37Z arifin $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+@import "utilities.less";
+@import "dropdowns.less";
+@import "popover.less";
+@import "buttons.less";
+
+/* Ellipsis */
+.ellipsis() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+}
+
+/* Gradient */
+#rt-gradient {
+	.horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+		background-color: mix(@midColor, @endColor, 80%);
+		background-image: -webkit-gradient(linear, left top, right top, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+		background-image: -webkit-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: -moz-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: -ms-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: -o-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-image: linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+		background-repeat: no-repeat;
+		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+}
+
+/* CSS Arrows */
+#CSSArrow {
+	.top(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+		bottom: @arrowOffset;
+		left: @arrowPosition;
+		margin-left: -@arrowWidth;
+		border-left: @arrowWidth solid transparent;
+		border-right: @arrowWidth solid transparent;
+		border-top: @arrowWidth solid @arrowColor;
+	}
+	.left(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+		top: @arrowPosition;
+		right: @arrowOffset;
+		margin-top: -@arrowWidth;
+		border-top: @arrowWidth solid transparent;
+		border-bottom: @arrowWidth solid transparent;
+		border-left: @arrowWidth solid @arrowColor;
+	}
+	.bottom(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+		top: -@arrowOffset;
+		left: @arrowPosition;
+		margin-left: -@arrowWidth - 1;
+		border-left: @arrowWidth solid transparent;
+		border-right: @arrowWidth solid transparent;
+		border-bottom: @arrowWidth solid @arrowColor;
+	}
+	.right(@arrowWidth: 5px, @arrowColor: @black, @arrowOffset: 0, @arrowPosition: 50%) {
+		top: @arrowPosition;
+		left: @arrowOffset;
+		margin-top: -@arrowWidth;
+		border-top: @arrowWidth solid transparent;
+		border-bottom: @arrowWidth solid transparent;
+		border-right: @arrowWidth solid @arrowColor;
+	}
+}
+
+// Core and Section Styles
+.main-body(dark){
+    	background-color: #222222;
+}
+
+.main-body(light){
+    	background-color: #f5f5f5;
+}
+
+.accent-overlay (@a) when (lightness(@a) > 30%) {
+	color: @white;
+	text-shadow: -1px -1px 1px rgba(0,0,0,0.3);
+}
+.accent-overlay (@a) when (lightness(@a) <= 70%) {
+	color: @black;
+}
+.accent2-overlay (@a) when (lightness(@a) > 50%) {
+	color: @black;
+}
+.accent2-overlay (@a) when (lightness(@a) <= 50%) {
+	color: @white;
+}
+.section-overlay (dark) {
+	color: @body-text-light;
+}
+.section-overlay (light) {
+	color: @body-text-dark;
+}
+.section-headline (dark) {
+	.headline {
+		color: @body-title-light;
+		text-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+	}
+	.rt-section-title {
+		&:before {
+			color: @body-title-light;
+			text-shadow: 1px 2px 2px rgba(0,0,0,0.2);
+		}
+	}
+}
+.section-headline (light) {
+	.headline {
+		color: @body-title-dark;
+		text-shadow: -1px -1px 1px @white;
+	}
+	.rt-section-title {
+		&:before {
+			color: @body-title-dark;
+			text-shadow: -1px -1px 1px @white;
+		}
+	}
+}
+
+.section-pattern(@pattern) when not (isnumber(@pattern)) {
+	background-image: url(../images/patterns/@{pattern}.png);
+}
+
+.section-basics() {
+	position: relative;
+	.rt-container {
+		padding: @section-padding 0;
+	}
+}
+
+.section-button (@accent) {
+	.button, .readon, .readmore, button.validate, #member-profile a, #member-registration a, .formelm-buttons button, .btn-primary, .sprocket-readmore, .sprocket-mosaic-loadmore, #gantry-totop, #gantry-resetsettings, #k2Container .k2ReadMore, #k2Container #submitCommentButton, .rokminievents-badge {
+		.accent-overlay(@accent);
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+		.box-shadow(~'0 1px 1px rgba(0,0,0,0.1), inset 0 1px 1px rgba(225,225,225,0.4), inset 0 -1px 1px rgba(0,0,0,0.1)');
+		border: 1px solid darken(@accent, 8%);
+		border-bottom-color: darken(@accent, 15%);
+		#gradient > .vertical-three-colors(@accent, darken(@accent, 2%), 45%, darken(@accent, 6%));
+		&:hover {
+			.accent-overlay(@accent);
+			#gradient > .vertical-three-colors(lighten(@accent, 5%), @accent, 45%, darken(@accent, 2%));
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+		}
+		&:active {
+			.box-shadow(~'0 1px 1px rgba(225,225,225,0.6), inset 0 0 1px rgba(0,0,0,0.5)');
+			text-shadow: -1px -1px 1px rgba(0,0,0,0.3);
+			&:before {
+				text-shadow: -1px -1px 1px rgba(0,0,0,0.3);
+			}
+		}
+		&:before {
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+		}
+		&.disabled {
+			&:hover {
+				#gradient > .vertical-three-colors(@accent, darken(@accent, 2%), 45%, darken(@accent, 6%));
+			}
+			&:active {
+				.box-shadow(~'0 1px 1px rgba(0,0,0,0.1), inset 0 1px 1px rgba(225,225,225,0.4), inset 0 -1px 1px rgba(0,0,0,0.1)');
+				text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+			}
+		}
+	}
+	a.disabled {
+		color: @body-text-dark;
+		&.btn-primary {
+			color: @white;
+		}
+		&:hover {
+			background-color: #E6E6E6;
+		}
+	}
+	.readmore, #gantry-resetsettings {
+		a {
+			.accent-overlay(@accent);
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+			&:active {
+				text-shadow: -1px -1px 1px rgba(0,0,0,0.3);
+			}
+		}
+	}
+}
+
+// Module and Title Variations
+.main-title (@accent, @accent2) {
+	.component-content {
+		h2 {
+			background: @accent2;
+			.accent2-overlay(@accent2);
+			text-shadow: none;
+			&:before {
+				border-top-color: @accent2;
+			}
+			a {
+				color: @black;
+				&:hover {
+					color: @accent;
+				}
+			}
+		}
+	}
+}
+
+.mod-box1 (@accent) {
+	.box1 {
+		@off-white: darken(@white, 10%);
+		background: @white;
+		color: @black;
+		text-shadow: none;
+		.box-shadow(~'0 5px 0 0 @{med-grey}, 0 1px 14px rgba(0,0,0,0.1), 0 8px 10px rgba(0,0,0,0.1)');
+		h1, h2, h3, h4, .title {
+			color: @black;
+		}
+		.box1 {
+			background: none;
+			.box-shadow(none);
+		}
+		a {
+			&:hover {
+				color: @black;
+			}
+		}
+		ul.menu {
+			li {
+				> a, > .item, > .separator {
+					color: @black;
+					&:hover {
+						color: @accent;
+					}
+				}
+			}
+		}
+		.sprocket-lists {
+			a.readon {
+				color: @accent;
+				&:hover {
+					color: @black;
+				}
+			}
+		}
+		.section-button(@accent);
+	}
+}
+.mod-box2 (@accent) {
+	.box2 {
+		.accent-overlay(@accent);
+		@dark-accent: darken(@accent, 10%);
+		background: lighten(@accent, 5%);
+		border: 1px solid darken(@accent, 8%);
+		.box-shadow(~'0 5px 0 0 @{dark-accent}, inset 0 0 2px rgba(225,225,225,0.8), 0 1px 10px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.3)');
+		h1, h2, h3, h4, .title {
+			.accent-overlay(@accent);
+			small {
+				color: @black;
+				text-shadow: none;
+			}
+		}
+		a {
+			color: darken(@accent, 18%);
+			text-shadow: none;
+			&:hover {
+				.accent-overlay(@accent);
+				text-shadow: none;
+			}
+		}
+		strong {
+			color: @black;
+			text-shadow: none;
+		}
+		.rt-divider {
+			border-top: 1px solid darken(@accent, 8%);
+			border-bottom: 1px solid lighten(@accent, 12%);			
+		}
+		.section-button(@accent);
+	}
+}
+.mod-box3 (@accent) {
+	.box3 {
+		#gradient > .vertical-three-colors(darken(@light-grey, 6%), darken(@light-grey, 2%), 45%, @light-grey);
+		.box-shadow(inset 0 0 8px rgba(0,0,0,0.3));
+		color: @black;
+		text-shadow: none;
+		h1, h2, h3, h4, .title {
+			color: @black;
+		}
+		a {
+			&:hover {
+				color: @black;
+			}
+		}
+		.section-button(@accent);
+	}
+}
+.mod-box4 (@accent) {
+	.box4 {
+		background: @accent;
+		#gradient > .vertical-three-colors(lighten(@accent, 14%), lighten(@accent, 6%), 45%, @accent);
+		.box-shadow(~'0 0 10px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(225,225,225,0.3)');
+		.accent-overlay(@accent);
+		h1, h2, h3, h4, .title {
+			.accent-overlay(@accent);
+		}
+		a {
+			color: darken(@accent, 18%);
+			text-shadow: none;
+			&:hover {
+				.accent-overlay(@accent);
+				text-shadow: none;
+			}
+		}
+		.section-button(@accent);
+	}
+}
+.mod-title2 (@accent) {
+	.title2 {
+		.title {
+			background: @accent;
+			.accent2-overlay(@accent);
+			text-shadow: none;
+			&:before {
+				border-top-color: @accent;
+			}
+		}
+	}
+}
+.mod-title3 (@accent) {
+	.title3 {
+		.module-title {
+			#gradient > .vertical-three-colors(lighten(@accent, 5%), @accent, 50%, darken(@accent, 5%));
+			border: 1px solid @accent;
+			.box-shadow(inset 0 1px 1px rgba(225,225,225,0.4));
+			> .title {
+				background: url(../images/patterns/noise.png);
+				.accent-overlay(@accent);
+
+			}
+		}
+	}
+}
+.mod-title4 (@accent) {
+	.title4 {
+		.module-title {
+			background: @accent;
+			.box-shadow(inset 0 12px 20px -5px rgba(0,0,0,0.3));
+			.title {
+				text-shadow: -1px -1px 2px rgba(0,0,0,0.6);
+				.accent-overlay(@accent);
+			}
+		}
+	}
+}
+
+.mod-box1-jagged () {
+	.box1 {
+		&.jagged:before {
+			background: -webkit-linear-gradient(125deg, transparent 60%, @med-grey 60%) 15px 50%, -webkit-linear-gradient( 55deg, transparent 60%, @med-grey 60%) 15px 50%;
+			background: -moz-linear-gradient(-35deg, transparent 60%, @med-grey 60%) 15px 50%, -moz-linear-gradient( 35deg, transparent 60%, @med-grey 60%) 15px 50%;
+			background: linear-gradient(-35deg, transparent 60%, @med-grey 60%) 15px 50%, linear-gradient( 35deg, transparent 60%, @med-grey 60%) 15px 50%;
+			background-size: 30px 30px;
+			-webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			-moz-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			-ms-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+		}
+		&.jagged:after {
+			background: -webkit-linear-gradient(125deg, transparent 60%, @white 60%) 15px 50%, -webkit-linear-gradient( 55deg, transparent 60%, @white 60%) 15px 50%;
+			background: -moz-linear-gradient(-35deg, transparent 60%, @white 60%) 15px 50%, -moz-linear-gradient( 35deg, transparent 60%, @white 60%) 15px 50%;
+			background: linear-gradient(-35deg, transparent 60%, @white 60%) 15px 50%, linear-gradient( 35deg, transparent 60%, @white 60%) 15px 50%;
+			background-size:30px 30px;
+		}
+	}
+}
+
+.mod-box1-jaggedtop () {
+	.box1 {
+		&.jaggedtop:before {
+			background: -webkit-linear-gradient(55deg, @white 60%, transparent 60%) 0 50%, -webkit-linear-gradient( 125deg, @white 60%, transparent 60%) 0 50%;
+			background: -moz-linear-gradient(35deg, @white 60%, transparent 60%) 0 50%, -moz-linear-gradient( -35deg, @white 60%, transparent 60%) 0 50%;
+			background: linear-gradient(35deg, @white 60%, transparent 60%) 0 50%, linear-gradient( -35deg, @white 60%, transparent 60%) 0 50%;
+			background-size:30px 30px;
+			-webkit-filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.15));
+			-moz-filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.15));
+			-ms-filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.15));
+			filter: drop-shadow(0 -2px 2px rgba(0,0,0,0.15));
+		}
+	}
+}
+
+
+.mod-box4-jagged (@accent) {
+	.box4 {
+		&.jagged:before {
+			background: -webkit-linear-gradient(125deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%, -webkit-linear-gradient( 55deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%;
+			background: -moz-linear-gradient(-35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%, -moz-linear-gradient( 35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%;
+			background: linear-gradient(-35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%, linear-gradient( 35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%;
+			background-size: 30px 30px;
+			-webkit-filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+			-moz-filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+			-ms-filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+			filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+		}
+		&.jagged:after {
+			background: -webkit-linear-gradient(125deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%, -webkit-linear-gradient( 55deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%;
+			background: -moz-linear-gradient(-35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%, -moz-linear-gradient( 35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%;
+			background: linear-gradient(-35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%, linear-gradient( 35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%;
+			background-size:30px 30px;
+		}
+	}
+}
+
+.mod-title4-jagged (@accent) {
+	.title4 {
+		.module-title {
+			&:before {
+				background: -webkit-linear-gradient(125deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%, -webkit-linear-gradient( 55deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%;
+				background: -moz-linear-gradient(-35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%, -moz-linear-gradient( 35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%;
+				background: linear-gradient(-35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%, linear-gradient( 35deg, transparent 60%, darken(@accent, 8%) 60%) 0 50%;
+				background-size: 30px 30px;
+				-webkit-filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+				-moz-filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+				-ms-filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+				filter: drop-shadow(0 4px 2px rgba(0,0,0,0.2));
+			}
+			&:after {
+				background: -webkit-linear-gradient(125deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%, -webkit-linear-gradient( 55deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%;
+				background: -moz-linear-gradient(-35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%, -moz-linear-gradient( 35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%;
+				background: linear-gradient(-35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%, linear-gradient( 35deg, transparent 60%, darken(@accent, 3%) 60%) 0 50%;
+				background-size:30px 30px;
+			}
+		}
+	}
+}
+
+.logo-jagged () {
+	.rt-logo-ribbon {
+		&.jagged:before {
+			background: -webkit-linear-gradient(125deg, transparent 60%, @black 60%) 15px 50%, -webkit-linear-gradient( 55deg, transparent 60%, @black 60%) 15px 50%;
+			background: -moz-linear-gradient(-35deg, transparent 60%, @black 60%) 15px 50%, -moz-linear-gradient( 35deg, transparent 60%, @black 60%) 15px 50%;
+			background: linear-gradient(-35deg, transparent 60%, @black 60%) 15px 50%, linear-gradient( 35deg, transparent 60%, @black 60%) 15px 50%;
+			background-size: 29px 30px;
+			-webkit-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			-moz-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			-ms-filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			filter: drop-shadow(0 3px 2px rgba(0,0,0,0.25));
+			bottom: -19px;
+		}
+		&.jagged:after {
+			background: -webkit-linear-gradient(125deg, transparent 60%, @logo-background 60%) 15px 50%, -webkit-linear-gradient( 55deg, transparent 60%, @logo-background 60%) 15px 50%;
+			background: -moz-linear-gradient(-35deg, transparent 60%, @logo-background 60%) 15px 50%, -moz-linear-gradient( 35deg, transparent 60%, @logo-background 60%) 15px 50%;
+			background: linear-gradient(-35deg, transparent 60%, @logo-background 60%) 15px 50%, linear-gradient( 35deg, transparent 60%, @logo-background 60%) 15px 50%;
+			background-size:29px 30px;
+			bottom: -15px;
+		}
+	}
+}
+
+// System Messages
+.sys-msg () {
+	color: #0055BB;
+	background: #BFD3E6;
+	border: 1px solid #84A7DB;
+	.box-shadow(~'0 5px 0 0 #84A7DB, inset 0 0 2px rgba(225,225,225,0.9), 0 1px 10px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.3)');
+}
+
+.sys-msg (error) {
+	color: #cc0000;
+	background: #EBC8C9;
+	border: 1px solid #DE7A7B;
+	.box-shadow(~'0 5px 0 0 #DE7A7B, inset 0 0 2px rgba(225,225,225,0.9), 0 1px 10px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.3)');
+}
+
+.sys-msg (notice) {
+	color: #A08B4C;
+	background: #F5ECC1;
+	border: 1px solid #B8A871;
+	.box-shadow(~'0 5px 0 0 #B8A871, inset 0 0 2px rgba(225,225,225,0.9), 0 1px 10px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.3)');
+}
+
+.sys-msg (success) {
+	color: #468847;
+	background: #dff0d8;
+	border: 1px solid #93BC8F;
+	.box-shadow(~'0 5px 0 0 #93BC8F, inset 0 0 2px rgba(225,225,225,0.9), 0 1px 10px rgba(0,0,0,0.1), 0 6px 10px rgba(0,0,0,0.3)');
+}

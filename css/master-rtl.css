@@ -1,0 +1,88 @@
+/**
+* @version   $Id: master-rtl.css 8052 2013-03-01 20:49:51Z josh $
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+/* Core */
+body.rtl ul, body.rtl ol {margin: 0 25px 10px 0;}
+body.rtl .component-content h2:before {left: -18px;right: inherit;border-left-width: 18px;border-right-width: 0;}
+body.rtl .rt-section-title[class^="icon-"]:before, body.rtl .rt-section-title[class*=" icon-"]:before {right: 0;left: inherit;}
+body.rtl .rt-section-title .headline-wrap {padding-right: 56px;}
+
+/* Article */
+body.rtl .component-content .actions {float: left;}
+body.rtl .component-content .article-info dd {margin-left: 20px;margin-right: 0;}
+body.rtl .component-content .items-more ol li a {padding: 4px 15px 4px 0;background-position: 100% -488px;}
+body.rtl .component-content .items-more ol li a:hover {background-position: 100% 6px;}
+body.rtl .component-content ol, body.rtl .component-content ul {margin: 0 25px 10px 0;}
+body.rtl {overflow-x: hidden;}
+body.rtl .component-content .rt-article-title > h2 {padding: 10px 0 10px 10px;}
+
+/* Navigation */
+/* Root Items */
+body.rtl .menu-block {float: right;}
+body.rtl .menutop li.root {float: right;}
+body.rtl .gf-menu {margin: 0;}
+body.rtl .gf-menu ul {margin: 0;}
+body.rtl .gf-menu.l1 > li {float: right;}
+body.rtl .gf-menu.l1 > li:last-child:before {background: none;}
+body.rtl .gf-menu .dropdown .rt-arrow-pointer {left: inherit;right: 35px;}
+body.rtl .gf-menu .item.icon [class^="icon-"]:before, .gf-menu .item.icon [class*=" icon-"]:before {margin-left: 5px;margin-right: 0;}
+body.rtl ul.menu {margin: 0;}
+
+/* Demo Styles */
+.fp-roksprocket-features .sprocket-features-title {padding-left: 0;padding-right: 90px;}
+.title5 .title .rt-bubble {margin: 0;}
+.fp-roksprocket-features .layout-showcase .sprocket-features-img-container {right: inherit;left: 0;}
+
+/* Dropdown Surrounds */
+body.rtl .menutop ul {float: right;}
+
+/* Dropdown Items */
+body.rtl .menutop ul li > .bullet {padding-left: 0;padding-right: 10px;}
+body.rtl .menutop li .item img {float: right;margin: 0 0 0 6px;}
+body.rtl .menutop li > .item .readon span {display: inherit;width: inherit;}
+body.rtl .menutop ul li.grouped-parent > .daddy span {background: none;}
+body.rtl .menutop ul li > .daddy span {background-position: 3px 3px;}
+
+/* No JS */
+body.rtl .menutop li.root:hover > .fusion-submenu-wrapper {left:inherit;right: 0;}
+body.rtl .menutop ul li:hover > .fusion-submenu-wrapper {left: inherit;right: 180px;}
+
+/* Grouped & Modules */
+body.rtl .fusion-grouped ol li .item {padding: 4px 6px 4px 14px;}
+body.rtl .menutop .fusion-grouped ol li {margin-left: inherit;margin-right: 0;}
+
+/* Side Menu */
+body.rtl .menu {direction: ltr;}
+
+/* Horiz Menu */
+body.rtl .horizmenu ul.menu li:last-child {margin: 0 15px;}
+
+/* Module Variations */
+body.rtl .title-icon {margin-right: 0;margin-left: 15px;}
+body.rtl .title2 .title:before {left: -18px;right: inherit;border-left-width: 18px;border-right-width: 0;}
+
+/* Joomla Core */
+body.rtl .component-content #searchForm input[type="radio"], body.rtl .component-content #searchForm input[type="checkbox"] {float: right;}
+body.rtl #contact-form fieldset {float: right;}
+body.rtl .component-content .rt-published {float: left;}
+
+/* Member Access */
+body.rtl #login-form label, body.rtl .component-content #password-lbl, body.rtl #username-lbl {float: right;}
+body.rtl .component-content .login + div ul li a, body.rtl #login-form a {padding: 4px 15px 4px 0;}
+body.rtl .component-content .login + div ul li a:before, body.rtl #login-form a:before {float: right;}
+
+/* RokSprocket - Lists */
+body.rtl .sprocket-lists-arrows {float: right;}
+body.rtl .sprocket-lists-title {text-align: left;}
+body.rtl .indicator span, body.rtl .sprocket-lists-title {direction: ltr;}
+body.rtl .sprocket-lists-arrows .arrow {direction: ltr;line-height: 1.1em;}
+body.rtl .sprocket-lists-pagination {float: left;}
+body.rtl .sprocket-lists-title.padding {padding-left: 50px !important;}
+body.rtl .sprocket-lists-container {margin: 0 !important;}
+
+/* RokAjaxSearch */
+body.rtl #mod-search-searchword.inputbox, body.rtl .rokajaxsearch .roksearch-wrapper input#roksearch_search_str.inputbox {background-position: 8px -67px;}
