@@ -2,11 +2,11 @@ codePhant
 =========
 
 
-Site do primeiro codePhant - 1º Evento PHP Realizado em Sergipe
+Site do primeiro codePhant - 1Âº Evento PHP Realizado em Sergipe
 =======
-Venha galera contribuir com o PHPSE para o evento codePhant.Ajude-nos a criar o site do evento com sugestões, mudanças de layout, críticas, etc. 
+Venha galera contribuir com o PHPSE para o evento codePhant.Ajude-nos a criar o site do evento com sugestÃµes, mudanÃ§as de layout, crÃ­ticas, etc. 
 
-Toda ajuda é bem vinda! O site é de todo comunidade.
+Toda ajuda Ã© bem vinda! O site Ã© de toda a comunidade.
 
-Não deixem de contribuir. Estamos contando com vocês!
+NÃ£o deixem de contribuir. Estamos contando com vocÃªs!
 
